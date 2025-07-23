@@ -47,11 +47,11 @@ function HeaderQuiz() {
       <div className={styles.headerRight}>
         <button onClick={handleStop}>
           <OctagonX color="#FF4136" size={20} />
-          <span> {t("Stop")}</span>
+          <span> {t("stop")}</span>
         </button>
         <button onClick={handleLogout}>
           <LogOut color="#FFA500" size={20} />
-          <span> {t("Logout")}</span>
+          <span> {t("logout")}</span>
         </button>
       </div>
 
