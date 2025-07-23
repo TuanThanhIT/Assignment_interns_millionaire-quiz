@@ -1,0 +1,22 @@
+.prize {
+  color: #f1f0ee;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.75;
+    text-shadow: 0 0 5px #fff;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px #ff6666, 0 0 20px #ff3333;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0.75;
+    text-shadow: 0 0 5px #fff;
+  }
+}

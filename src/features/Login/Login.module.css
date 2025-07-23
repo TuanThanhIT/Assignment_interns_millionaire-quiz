@@ -1,0 +1,51 @@
+.message {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.notice {
+  color: white;
+}
+.input {
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.loginButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.languages button,
+.music button {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #4f46e5; /* Indigo */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+.languages button:hover,
+.music button:hover {
+  background-color: #4338ca; /* Darker indigo */
+  transform: translateY(-1px);
+}
+
+.languages button:active {
+  transform: scale(0.98);
+}

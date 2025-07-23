@@ -1,0 +1,29 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: url("/public/images/bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 40vw;
+  margin: 100px auto;
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, #4e4a8a, #6b66a3, #8984bc);
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: white;
+}

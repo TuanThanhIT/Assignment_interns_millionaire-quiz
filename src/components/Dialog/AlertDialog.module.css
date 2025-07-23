@@ -1,0 +1,84 @@
+.dialogContent {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.25s ease-out;
+  z-index: 100;
+}
+
+.dialogContent h2,
+.dialogContent .DialogTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.dialogContent .DialogDescription {
+  color: #4b5563;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.dialogButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cancel {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.cancel:hover {
+  background: #d1d5db;
+}
+
+.confirm {
+  background: #4ade80; /* xanh ngọc */
+  color: white;
+}
+
+.confirm:hover {
+  background: #22c55e;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

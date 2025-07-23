@@ -1,0 +1,161 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.questionTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.questionTime {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.totalTime {
+  display: flex;
+  width: 60vw;
+  height: 10px;
+  background-color: white;
+}
+.timeLeft {
+  width: 80%;
+  background-color: green;
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+.timeDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionText {
+  list-style: none;
+  background: rgba(11, 19, 43, 0.9); /* màu xanh tím đậm mờ */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  width: 80%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.option {
+  list-style: none;
+  background: rgba(11, 19, 43, 0.9); /* màu xanh tím đậm mờ */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  transform: translateY(-2px);
+}
+
+.option:active {
+  color: #ff1744;
+}
+
+.helpButton button,
+.answerButton button {
+  margin-right: 10px;
+  background: linear-gradient(to bottom, #4e4a8a, #6b66a3, #8984bc);
+  color: white;
+  transition: all 0.1s ease-in;
+  text-align: center;
+  font-weight: bold;
+}
+.answerButton button {
+  width: 130px;
+}
+.helpButton button {
+  width: 170px;
+}
+
+.helpButton button:hover,
+.answerButton button:hover {
+  transform: scale(1.05);
+  color: #ffd700;
+}
+
+.timeDanger {
+  color: #ff1744;
+  animation: blink 1s infinite;
+  transition: color 0.2s ease;
+}
+
+.timeNormal {
+  color: #ffd700;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  gap: 20px;
+}
+
+.usedHelp {
+  background: "#2e2e2e";
+}

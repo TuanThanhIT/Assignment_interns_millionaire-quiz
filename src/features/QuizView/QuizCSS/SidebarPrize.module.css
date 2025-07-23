@@ -1,0 +1,50 @@
+.sidebarContainer {
+  border-radius: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  padding-right: 20px;
+}
+
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 7px;
+}
+
+.sidebarContainer h3 {
+  color: yellow;
+  font-size: 20px;
+}
+
+.prize {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.mainPrize {
+  background-color: #bf00ff;
+}
+
+.achievedPrize {
+  background-color: #00ff66;
+  color: #222222;
+}
+
+.failPrize {
+  background-color: #ff1744;
+  color: #222222;
+}
+.idd {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.prize:hover {
+  transform: scale(1.05);
+}

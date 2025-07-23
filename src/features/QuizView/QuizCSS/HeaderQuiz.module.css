@@ -1,0 +1,43 @@
+.headerContainer {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerRight button {
+  margin-right: 10px;
+  background: linear-gradient(to bottom, #4e4a8a, #6b66a3, #8984bc);
+  color: white;
+  transition: all 0.1s ease-in;
+  text-align: center;
+  font-weight: bold;
+}
+
+.headerRight button {
+  width: 130px;
+}
+
+.headerRight button:hover {
+  transform: scale(1.05);
+  color: #ffd700;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}

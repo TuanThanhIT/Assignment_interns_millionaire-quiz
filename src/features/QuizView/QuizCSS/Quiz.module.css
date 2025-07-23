@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+  margin: 0;
+  padding: 0;
+  background: rgba(27, 27, 47, 0.8);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
