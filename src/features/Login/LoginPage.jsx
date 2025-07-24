@@ -19,6 +19,8 @@ function LoginPage() {
   const contentToast = t("contentToast");
 
   const { playMusic, pauseMusic } = useContext(MusicContext);
+  const [onMusic, setOnMusic] = useState();
+  const [onLanguage, setOnLanguage] = useState();
 
   function handleSubmit() {
     if (userName === "") {
@@ -42,23 +44,58 @@ function LoginPage() {
             setUserName(e.target.value);
           }}
         ></input>
-        <button type="button" className="buttonStart" onClick={handleSubmit}>
+        <button
+          type="button"
+          className="buttonStart"
+          style={{ outline: "none" }}
+          onClick={handleSubmit}
+        >
           {t("login")}
         </button>
 
         <div className={styles.loginButtons}>
           <div className={styles.languages}>
             <button
-              onClick={() => i18n.changeLanguage("en")}
-              style={{ margin: "20px" }}
+              onClick={() => {
+                i18n.changeLanguage("en");
+                setOnLanguage(true);
+              }}
+              style={{
+                background: onLanguage ? "#4caf50" : "#4f46e5",
+              }}
             >
               🔤 🇺🇸 En
             </button>
-            <button onClick={() => i18n.changeLanguage("vi")}>🔡 🇻🇳 Vi</button>
+            <button
+              onClick={() => {
+                i18n.changeLanguage("vi");
+                setOnLanguage(false);
+              }}
+              style={{
+                background: onLanguage ? "#4f46e5" : "#4caf50",
+              }}
+            >
+              🔡 🇻🇳 Vi
+            </button>
           </div>
           <div className={styles.music}>
-            <button onClick={playMusic}>🎵 Bật nhạc</button>
-            <button onClick={pauseMusic}>⏸️ Tắt nhạc</button>
+            <button
+              onClick={() => {
+                playMusic(), setOnMusic(true);
+              }}
+              style={{ background: onMusic ? "#4caf50" : "#4f46e5" }}
+            >
+              🎵 Bật nhạc
+            </button>
+            <button
+              onClick={() => {
+                pauseMusic();
+                setOnMusic(false);
+              }}
+              style={{ background: onMusic ? "#4f46e5" : "#4caf50" }}
+            >
+              ⏸️ Tắt nhạc
+            </button>
           </div>
         </div>
         <ErrorToast

@@ -23,7 +23,11 @@ function ResultPage() {
       <h1 className={styles.prize}>
         {value.prize === -1 ? 0 : prizeLevels[value.prize].amount} VNĐ
       </h1>
-      <button className="buttonStart" onClick={handleExit}>
+      <button
+        className="buttonStart"
+        onClick={handleExit}
+        style={{ outline: "none" }}
+      >
         {t("exitButton")}
       </button>
     </div>

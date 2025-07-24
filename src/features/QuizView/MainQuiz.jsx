@@ -84,10 +84,14 @@ function MainQuiz() {
     let timeout;
     if (flag.current === true) {
       setShowNoticeToast(true);
-      if (checkAnswer && checkAnswer.check === false) {
+      if (checkAnswer.check === false) {
         timeout = setTimeout(() => {
           navigate("/result");
-        }, 5000);
+        }, 3000);
+      } else {
+        timeout = setTimeout(() => {
+          handleQuestion();
+        }, 3000);
       }
     }
     return () => clearTimeout(timeout);
@@ -214,41 +218,20 @@ function MainQuiz() {
           {t("questionNumber")} {question.id}
         </h3>
         <div className={styles.helpButton}>
-          <button
-            onClick={handleFiftyFifty}
-            style={isLockedFifty.current ? { opacity: 0.6 } : {}}
-          >
+          <button onClick={handleFiftyFifty} disabled={isLockedFifty.current}>
             <Divide color="#00BFFF" size={20} />
             <span> 50:50</span>
           </button>
-          <button
-            onClick={handleHelpCall}
-            style={isLockedCall.current ? { opacity: 0.6 } : {}}
-          >
+          <button onClick={handleHelpCall} disabled={isLockedCall.current}>
             <Phone color="#32CD32" size={20} />
             <span> {t("help_call")}</span>
           </button>
-          <button
-            onClick={handleAskAudiences}
-            style={isLockedAsk.current ? { opacity: 0.6 } : {}}
-          >
+          <button onClick={handleAskAudiences} disabled={isLockedAsk.current}>
             <Users color="#FFD700" size={20} />
             <span> {t("help_audience")}</span>
           </button>
         </div>
         <div className={styles.answerButton}>
-          <button
-            onClick={() => {
-              if (isLocked.current === false) {
-                return;
-              } else {
-                handleQuestion();
-              }
-            }}
-          >
-            <CircleQuestionMark color="#4ade80" size={20} />
-            <span> {t("next_question")}</span>
-          </button>
           <button onClick={handleAnswer}>
             <MessageCircleReply color="#4ade80" size={20} />
             <span> {t("submit_answer")}</span>
