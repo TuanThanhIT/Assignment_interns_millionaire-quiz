@@ -22,7 +22,7 @@ const vi = {
   next_question: "Tiếp theo",
   submit_answer: "Trả lời",
   time_left: "Thời gian",
-  audience_chart_title: "Tỷ lệ các đáp án khán giả đưa ra trả lời cho câu hỏi",
+  audience_chart_title: "Tỷ lệ các đáp án khán giả trả lời cho câu hỏi",
   close: "Đóng",
   titleDialog: "Thông báo",
   contentDialog: "Bạn có chắc chắn đáp án mà mình chọn?",

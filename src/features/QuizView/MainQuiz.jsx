@@ -1,13 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Clock,
-  MessageCircleReply,
-  Divide,
-  Phone,
-  Users,
-  CircleQuestionMark,
-} from "lucide-react";
+import { Clock, MessageCircleReply, Divide, Phone, Users } from "lucide-react";
 import styles from "./QuizCSS/MainQuiz.module.css";
 import MillionaireQuestions from "../../datas/millionaireQuestions";
 import AlertDialog from "../../components/Dialog/AlertDialog";
