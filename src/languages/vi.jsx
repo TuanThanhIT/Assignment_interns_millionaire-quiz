@@ -19,7 +19,7 @@ const vi = {
   help_fifty: "50:50",
   help_call: "Gọi điện",
   help_audience: "Hỏi khán giả",
-  next_question: "Câu hỏi",
+  next_question: "Tiếp theo",
   submit_answer: "Trả lời",
   time_left: "Thời gian",
   audience_chart_title: "Tỷ lệ các đáp án khán giả đưa ra trả lời cho câu hỏi",
