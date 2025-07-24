@@ -32,9 +32,9 @@ function LoginPage() {
     }
   }
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div>
-        <h1 className="title">{t("welcomeLogin")}</h1>
+        <h1 className={styles.title}>{t("welcomeLogin")}</h1>
         <p className={styles.message}>{t("messageLogin")}</p>
         <input
           ref={nameRef}
@@ -43,11 +43,10 @@ function LoginPage() {
           onChange={(e) => {
             setUserName(e.target.value);
           }}
-        ></input>
+        />
         <button
           type="button"
-          className="buttonStart"
-          style={{ outline: "none" }}
+          className={styles.buttonStart}
           onClick={handleSubmit}
         >
           {t("login")}
@@ -81,7 +80,8 @@ function LoginPage() {
           <div className={styles.music}>
             <button
               onClick={() => {
-                playMusic(), setOnMusic(true);
+                playMusic();
+                setOnMusic(true);
               }}
               style={{ background: onMusic ? "#4caf50" : "#4f46e5" }}
             >
@@ -98,6 +98,7 @@ function LoginPage() {
             </button>
           </div>
         </div>
+
         <ErrorToast
           open={show}
           setOpen={setShow}

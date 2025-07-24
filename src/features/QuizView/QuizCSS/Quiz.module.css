@@ -13,3 +13,18 @@
   display: grid;
   grid-template-columns: 2fr 8fr;
 }
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: auto auto;
+    position: relative;
+    height: auto; /* Quan trọng: tránh mất chiều cao khi header co lại */
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+  }
+}

@@ -16,8 +16,8 @@ function ResultPage() {
   }
 
   return (
-    <div className="container">
-      <h2 className="title">
+    <div className={styles.container}>
+      <h2 className={styles.title}>
         🏆 {t("congratulation")} {value.user}! {t("prizeReceive")}:
       </h2>
       <h1 className={styles.prize}>

@@ -37,3 +37,17 @@
     opacity: 1;
   }
 }
+
+/* Khi ở màn hình nhỏ (mobile) */
+@media (max-width: 600px) {
+  .toastViewport {
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+
+  .toastError {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}

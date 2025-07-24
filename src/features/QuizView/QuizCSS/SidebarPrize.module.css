@@ -48,3 +48,36 @@
 .prize:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .sidebarContainer {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: none;
+  }
+
+  .sidebarContainer h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .sidebarList {
+    gap: 4px;
+  }
+
+  .prize {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .idd {
+    font-size: 12px;
+  }
+
+  .amount {
+    font-size: 12px;
+  }
+}

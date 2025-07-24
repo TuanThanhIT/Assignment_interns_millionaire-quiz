@@ -169,3 +169,71 @@
 .usedHelp {
   background: "#2e2e2e";
 }
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 12px;
+  }
+
+  .questionTitle {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .helpButton,
+  .answerButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .helpButton button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+
+  .answerButton button {
+    width: 90%;
+    max-width: 280px;
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+
+  .questionTime {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .totalTime {
+    margin-top: 12px;
+    width: 90vw;
+  }
+
+  .questionText {
+    font-size: 1.1rem;
+    width: 95%;
+    padding: 16px;
+  }
+
+  .options {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .option {
+    width: 92%;
+    font-size: 1rem;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .overlay {
+    padding: 16px;
+  }
+}

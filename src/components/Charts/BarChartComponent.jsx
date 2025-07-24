@@ -1,5 +1,13 @@
 import React from "react";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
@@ -16,36 +24,39 @@ const getPath = (x, y, width, height) => {
 
 const TriangleBar = (props) => {
   const { fill, x, y, width, height } = props;
-
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
 export default function BarChartComponent({ data }) {
   return (
-    <BarChart
-      width={500}
-      height={300}
-      data={data}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="DapAn" tick={{ fill: "#ffffff", fontSize: 14 }} />
-      <YAxis tick={{ fill: "#ffffff", fontSize: 14 }} />
-      <Bar
-        dataKey="LuaChon"
-        fill="#8884d8"
-        shape={<TriangleBar />}
-        label={{ position: "top" }}
-      >
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+    <div style={{ width: "100%", height: 300 }}>
+      <ResponsiveContainer>
+        <BarChart
+          data={data}
+          margin={{
+            top: 20,
+            right: 20,
+            left: 0,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="DapAn" tick={{ fill: "#ffffff", fontSize: 14 }} />
+          <YAxis tick={{ fill: "#ffffff", fontSize: 14 }} />
+          <Bar
+            dataKey="LuaChon"
+            shape={<TriangleBar />}
+            label={{ position: "top", fill: "#fff" }}
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={colors[index % colors.length]}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
 }

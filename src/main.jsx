@@ -5,7 +5,6 @@ import "./index.css";
 import App from "./App.jsx";
 import "./languages/i18n.jsx";
 import AuthProvider from "./contexts/AuthContext.jsx";
-import GlobalStyles from "./components/GlobalStyles/index.jsx";
 import MusicProvider from "./contexts/MusicContext.jsx";
 
 createRoot(document.getElementById("root")).render(
@@ -13,9 +12,7 @@ createRoot(document.getElementById("root")).render(
     <AuthProvider>
       <MusicProvider>
         <Router>
-          <GlobalStyles>
-            <App />
-          </GlobalStyles>
+          <App />
         </Router>
       </MusicProvider>
     </AuthProvider>

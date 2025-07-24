@@ -60,3 +60,26 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 600px) {
+  .toastViewport {
+    left: 10px;
+    right: 10px;
+    bottom: 12px;
+  }
+
+  .toastSuccess,
+  .toastError {
+    max-width: 100%;
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  .toastTitle {
+    font-size: 0.95rem;
+  }
+
+  .toastDesc {
+    font-size: 0.8rem;
+  }
+}

@@ -1,3 +1,20 @@
+.container {
+  width: 50vw;
+  margin: 100px auto;
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, #4e4a8a, #6b66a3, #8984bc);
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #ffd700;
+}
+
 .prize {
   color: #f1f0ee;
   font-weight: bold;
@@ -18,5 +35,25 @@
   100% {
     opacity: 0.75;
     text-shadow: 0 0 5px #fff;
+  }
+}
+
+@media (max-width: 600px) {
+  .prize {
+    font-size: 22px;
+    text-align: center;
+    margin: 16px 0;
+  }
+  .container {
+    width: min(75vw, 430px);
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 }
